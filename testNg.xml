@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Contract Test Suite" verbose="1" preserve-order="true">
+    <test name="Contract Test Cases" >
+        <classes>
+            <class name="ContractTest.GoogleApi">
+                <methods>
+                    <include name="testPlanningEventIdDoesNotExist" />
+                    <include name="testInvalidPlanningEventIdDoesNotExist" />
+                    <include name="testValidPlanningEventWithInvalidAuth"/>
+                    <include name="testValidPlanningEventId"/>
+                </methods>
+            </class>
+
+            <class name="com.tesco.test.GetLatestFloorPlan">
+                <methods>
+                    <include name="testInvalidEventIdDate" />
+                    <include name="testInnvalidStore"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

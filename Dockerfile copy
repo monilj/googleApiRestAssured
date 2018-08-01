@@ -1,0 +1,15 @@
+
+FROM 
+RUN apt-get update
+RUN apt-get update && apt-get install -y \
+  default-jre \
+  default-jdk \
+  maven
+
+RUN mvn -version
+WORKDIR /Users/monilj/Downloads/ContractTest/
+ADD . /Users/monilj/Downloads/ContractTest/
+RUN chmod 777 /Users/monilj/Downloads/ContractTest/
+RUN cd /Users/monilj/Downloads/ContractTest/
+CMD mvn clean test 
+#[“java -jar ./target/ContractTest-1.0-SNAPSHOT.jar"]
